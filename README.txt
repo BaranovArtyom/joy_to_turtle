@@ -1,6 +1,7 @@
 sudo apt-get install ros-<rosdistro>-teleop-twist-joy
 
-. /opt/ros/<rosdistro>/setup.bash
+. /opt/ros/<rosdistro>/setup.bash     # in every terminal
+
 
 ros2 run turtlesim turtlesim_node
 
@@ -14,3 +15,6 @@ ros2 run joy_to_turtle joy_to_turtle
 
 colcon build
 ros2 launch joy_to_turtle joy_to_turtle.launch.py
+
+
+ros2 launch teleop_twist_joy teleop-launch.py joy_config:='xbox'
